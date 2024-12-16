@@ -1,0 +1,325 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f3e6c5;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+}
+
+/* Main Container for the index and dashboard pages*/
+.main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Insert Container */
+.insert-container {
+    position: relative;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    width: 95%;
+    text-align: center;
+    overflow: hidden; /* Prevent elements from spilling out */
+}
+
+/*Keeps the Penfield background image centered*/
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Section Container (for Document Info, Date Info, etc.) */
+.section-container {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Keeps the logout button and help side by side*/
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Section Header */
+.section-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Subtitle Styling */
+.nice-form-group .form-left small {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Form Group Structure */
+.nice-form-group {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.nice-form-group label {
+    font-weight: bold;
+    align-self: center;
+}
+
+.nice-form-group input,
+.nice-form-group select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.nice-form-group small {
+    font-size: 0.875rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Form Left (Label and Explanation) */
+.form-left {
+    flex: 1;
+    text-align: left;
+}
+
+.form-left label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Form Right (Input Field) */
+.form-right {
+    flex: 2;
+    position: relative;
+}
+
+.form-right input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+/* Placeholder Text */
+.form-right input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Input Background Example Text (as placeholder but not inside input) */
+.form-right input + .field-example {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-style: italic;
+    color: #aaa;
+    pointer-events: none;
+}
+
+/* Form Explanation Text Below Input */
+.form-right small {
+    font-size: 0.875rem;
+    color: #555;
+    margin-top: 8px;
+}
+
+/* Buttons */
+button,
+a {
+    background-color: #d77206;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    background-color: #b75a0d;
+}
+
+.logout-btn {
+    background-color: #ee2b2b;
+    color: #fff;
+}
+
+.logout-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Notifications */
+.success-banner {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 1.5rem 0; 
+    margin-bottom: 1rem;
+    font-size: 1.5rem; 
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    background-color: #ccffcc;
+    color: #006600;
+}
+
+.error-banner {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 1.5rem 0; 
+    margin-bottom: 1rem;
+    background-color: #ffcccc; 
+    color: #990000; 
+    font-size: 1.5rem; 
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+}
+
+/* Background Penfield Image used in index and dashboard*/
+.penfield-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Two-column Layout for Small Screens */
+@media (max-width: 768px) {
+    .nice-form-group {
+        grid-template-columns: 1fr;
+    }
+
+    .insert-container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .form-left,
+    .form-right {
+        flex: 1;
+    }
+
+    .section-container {
+        padding: 10px;
+    }
+}
+
+/* Wider Container for Customer Info */
+.customer-container {
+    position: relative;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1600px;  /* Adjust to make it wider */
+    width: 95%;
+    text-align: center;
+    overflow: hidden; /* Prevent elements from spilling out */
+}
+
+/* You can apply different styles to the customer info sections or tables inside the customer-container */
+.customer-container table {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.customer-container th,
+.customer-container td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.customer-container th {
+    background-color: #f4f4f4;
+}
+
+
+.record-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.record-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+.record-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #d77206;
+}
+
+.record-box ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.record-box ul li {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.record-box ul li strong {
+    color: #555;
+}
+
