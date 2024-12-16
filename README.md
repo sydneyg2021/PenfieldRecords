@@ -63,3 +63,85 @@ Future enhancements include:
 3. Clone this repository to your local machine:
    ```bash
    git clone https://github.com/your-repo/PenfieldRecords.git
+4. Login
+- Use account credentials to log in (only given to select users at this time).
+
+---
+
+## Functionality  
+
+### Current Features  
+
+#### User Authentication:  
+- Login system for Admins and Users.  
+- Session-based access control to ensure secure interactions.  
+
+#### Record Management:  
+**Admins can:**  
+- Create, edit, and delete records in collections like *Deeds, Wills, and Agreements*.  
+- Manage user accounts (create accounts, with editing and deletion coming soon).  
+
+**Users can:**  
+- Create, search, and modify records within permitted collections.  
+
+#### Collection Search:  
+- Users can filter records by specific fields using text-based queries.  
+- Supports partial matches via MongoDB's regex search.  
+
+#### Navigation:  
+- Users can navigate through large datasets using keyboard shortcuts (e.g., arrow keys).  
+
+#### Error Handling:  
+- Alerts users if required fields are missing during searches or data creation.  
+
+---
+
+### Upcoming Features  
+- Role-based access expansion (e.g., public viewers).  
+- Admin functionalities for advanced data analytics.  
+- Enhanced UI for bulk record uploads and modifications.  
+
+---
+
+## Code Structure  
+
+### Important Files  
+- `index.php`: Login page.  
+- `dashboard.php`: Main interface for record and user management.  
+- `manage_records.php`: Record-specific CRUD operations.  
+- `db_connect.php`: MongoDB connection setup.  
+- `styles.css`: Styling for the front end.  
+
+### Key Directories  
+- `/assets/`: Contains stylesheets and JavaScript files.  
+- `/vendor/`: Auto-generated directory for Composer dependencies.  
+- `/views/`: Frontend templates for different pages.  
+
+---
+
+## Future Enhancements  
+
+### Scalability:  
+- Support for larger datasets by introducing indexing mechanisms.  
+
+### Advanced Search:  
+- Adding multi-field search and filter options.  
+
+### Integration:  
+- API support for external services.  
+
+### Deployment:  
+- Remote hosting capabilities for deployment.  
+---
+
+## Contact  
+
+For any issues or contributions, please reach out to the project team at:  
+
+- **Email**: [sydneyg2021@gmail.com](mailto:support@sydneyg2021@gmail.com)  
+- **GitHub**: [Penfield Records Repository](#)  
+
+---
+
+**Disclaimer**: This is an alpha version of the application and is subject to updates and improvements.  
+
