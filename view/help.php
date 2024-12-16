@@ -13,9 +13,8 @@ if (!isset($_SESSION['username'])) {
 }
 
 // MongoDB Connection URI for connecting to the cloud database
-$uri = "mongodb+srv://Admin:wMl9JKCLzNS6zlmx@cluster0.wylus.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-$client = new Client($uri);
-
+$uri = $_ENV['MONGO_URI'];
+$client = new MongoDB\Client($uri);
 // Select the 'Management' database and 'Messages' collection from the MongoDB client
 $db = $client->selectDatabase('Management');
 $messagesCollection = $db->selectCollection('Messages');

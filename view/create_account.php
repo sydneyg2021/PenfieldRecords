@@ -13,8 +13,8 @@ if (!isset($_SESSION['username'])) {
 }
 
 // MongoDB Connection URI
-$uri = "mongodb+srv://Admin:wMl9JKCLzNS6zlmx@cluster0.wylus.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-$client = new Client($uri);
+$uri = $_ENV['MONGO_URI'];
+$client = new MongoDB\Client($uri);
 
 // Select the 'Management' database from the MongoDB cluster
 $db = $client->selectDatabase('Management');

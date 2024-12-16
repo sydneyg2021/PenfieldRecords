@@ -5,7 +5,12 @@ use MongoDB\Client;
 session_start();
 
 // MongoDB Setup
-$uri = "mongodb+srv://Admin:wMl9JKCLzNS6zlmx@cluster0.wylus.mongodb.net";
+// Load environment variables
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+// Retrieve the MongoDB URI from the environment
+$uri = $_ENV['MONGO_URI'];
 $client = new Client($uri);
 $db = $client->selectDatabase('Penfield');
 

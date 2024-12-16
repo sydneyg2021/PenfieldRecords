@@ -10,8 +10,8 @@ if (!isset($_SESSION['username'])) {
 }
 
 // MongoDB Connection
-$uri = "mongodb+srv://Admin:wMl9JKCLzNS6zlmx@cluster0.wylus.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-$client = new Client($uri);
+$uri = $_ENV['MONGO_URI'];
+$client = new MongoDB\Client($uri);
 $db = $client->selectDatabase('Management');
 
 // Fetch the logged-in user's role from MongoDB

@@ -4,8 +4,8 @@ require '../vendor/autoload.php';
 use MongoDB\Client;
 
 // MongoDB Connection
-$uri = "mongodb+srv://Admin:wMl9JKCLzNS6zlmx@cluster0.wylus.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-$client = new Client($uri);
+$uri = $_ENV['MONGO_URI'];
+$client = new MongoDB\Client($uri);
 $db = $client->selectDatabase('Penfield');
 
 // Fetch the schema (including required fields) for the selected collection
