@@ -4,8 +4,8 @@ session_start(); // Start the session
 require 'vendor/autoload.php'; // Include Composer's autoloader
 use MongoDB\Client;
 
-$uri = "$uri = $_ENV['MONGO_URI'];
-$client = new MongoDB\Client($uri);:wMl9JKCLzNS6zlmx@cluster0.wylus.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+$uri = $_ENV['MONGO_URI'];
+$client = new MongoDB\Client($uri);
 
 // Connect to MongoDB
 try {
